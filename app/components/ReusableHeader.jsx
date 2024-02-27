@@ -4,7 +4,7 @@ import { COLORS, SIZES } from "../constants/theme";
 
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import AssetImage from "./AssetImage";
+import AssetImage from "../components/AssetImage";
 
 const ReusableHeader = ({ title, backbtn }) => {
   const navigation = useNavigation();

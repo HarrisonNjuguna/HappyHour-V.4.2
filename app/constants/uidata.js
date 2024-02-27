@@ -14,21 +14,21 @@ const categories = [
         "_id": "65310f3381e4d98d60b093c5",
         "title": "Gin",
         "value": "gin",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/ee2d952c-1d7d-48f7-81b3-cb967343eb6c-curry.png",
+        "imageUrl": "https://banner2.cleanpng.com/20181117/ehq/kisspng-bombay-sapphire-gin-cocktail-bombay-sapphire-gin-b-5bf0c86c29a623.2649849215425066041706.jpg",
         "__v": 0
     },
     {
         "_id": "6531206cbbe4998e90af3feb",
         "title": "Beers",
         "value": "beers",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/466693e6-f999-42e0-8794-09325ece1b45-Pizza.png",
+        "imageUrl": "https://www.oaks.delivery/wp-content/uploads/Untitled-2.png",
         "__v": 0
     },
     {
         "_id": "6531209dbbe4998e90af3fef",
         "title": "Rum",
         "value": "rum",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/6645cf41-bc89-4dd0-9f80-bba9487633b2-Spaghetti.png",
+        "imageUrl": "https://e7.pngegg.com/pngimages/488/785/png-clipart-rum-liquor-cocktail-bacardi-alcoholic-beverages-cocktail-distilled-beverage-cocktail.png",
         "__v": 0
     },
     {
@@ -42,14 +42,14 @@ const categories = [
         "_id": "65312084bbe4998e90af3fed",
         "title": "Tequilla",
         "value": "tequilla",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/3c94bc09-b8b9-4961-accb-f68b7e8121cc-Hamburger.png",
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/6/Tequila-PNG.png",
         "__v": 0
     },
     {
         "_id": "65310efb81e4d98d60b093c3",
         "title": "Soft Drinks",
         "value": "soft_drinks",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/139718b2-2832-40c5-8d7b-11fd9feb0aac-chicken.png",
+        "imageUrl": "https://banner2.cleanpng.com/20180716/bwu/kisspng-fizzy-drinks-sprite-the-coca-cola-company-fanta-ron-cola-5b4c32f1b99097.2128228815317204337601.jpg",
         "__v": 0
     },
     {
@@ -147,13 +147,13 @@ const restaurants = [
 const foods = [
     {
         "_id": "65316968f94c6496dc84f3c1",
-        "title": "SHOP 1test",
+        "title": "Tiramisu",
         "foodTags": [
-            "750ml",
-            "1 Litre",
-            "Black Barrel",
-            "Test3",
-            "Test4"
+            "Italian",
+            "Dessert",
+            "Coffee",
+            "Mascarpone",
+            "Cocoa"
         ],
         "foodType": [
             "Dessert"
@@ -163,37 +163,37 @@ const foods = [
         "restaurant": "6530ea6bc9e72013e5b6592d",
         "rating": 4.9,
         "ratingCount": "420",
-        "description": "Jim Beam Black Bourbon Whiskey stands as a testament to the art of bourbon craftsmanship, delivering a premium experience designed for sipping and savoring.",
+        "description": "A classic Italian dessert made of layers of coffee-soaked ladyfingers and creamy mascarpone, topped with cocoa.",
         "price": 7.99,
         "additives": [
             {
                 "id": 1,
-                "title": "Coke Zero",
+                "title": "Ladyfingers",
                 "price": "1.00"
             },
             {
                 "id": 2,
-                "title": "Tumblers",
+                "title": "Coffee",
                 "price": "1.50"
             },
             {
                 "id": 3,
-                "title": "Delmonte",
+                "title": "Mascarpone Cheese",
                 "price": "2.50"
             },
             {
                 "id": 4,
-                "title": "Additive 4",
+                "title": "Cocoa",
                 "price": "0.50"
             },
             {
                 "id": 5,
-                "title": "Additive 5",
+                "title": "Sugar",
                 "price": "0.50"
             }
         ],
         "imageUrl": [
-            "https://qph.cf2.quoracdn.net/main-qimg-5f02812570c604663972a89188ab223f"
+            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp"
         ],
         "__v": 0,
         "category": "6531209dbbe4998e90af3fef",
@@ -201,7 +201,7 @@ const foods = [
     },
     {
         "_id": "653168e9f94c6496dc84f3bf",
-        "title": "SHOP 2test",
+        "title": "Spaghetti Carbonara",
         "foodTags": [
             "Italian",
             "Creamy",
@@ -257,7 +257,7 @@ const foods = [
     },
     {
         "_id": "653169a9f94c6496dc84f3c3",
-        "title": "SHOP 3test",
+        "title": "Vegan Salad Bowl",
         "foodTags": [
             "Vegan",
             "Healthy",
@@ -315,7 +315,7 @@ const foods = [
     },
     {
         "_id": "65316771f94c6496dc84f3bd",
-        "title": "SHOP 4test",
+        "title": "Margherita Pizza",
         "foodTags": [
             "Italian",
             "Cheesy",
@@ -358,7 +358,7 @@ const foods = [
     },
     {
         "_id": "65316a01f94c6496dc84f3c7",
-        "title": "SHOP 5test",
+        "title": "Tropical Fruit Smoothie",
         "foodTags": [
             "Fruit",
             "Smoothie",
@@ -416,7 +416,7 @@ const foods = [
     },
     {
         "_id": "653169d8f94c6496dc84f3c5",
-        "title": "SHOP 6test",
+        "title": "Mixed Grill Platter",
         "foodTags": [
             "Barbecue",
             "Meat",

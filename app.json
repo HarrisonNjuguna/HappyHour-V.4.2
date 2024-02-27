@@ -25,7 +25,7 @@
       "config": {
         "package": "com.dacarnage.foodly",
         "googleMaps": {
-          "apiKey": ""
+          "apiKey": "AIzaSyCC2_LklEbBZYdmZrcwUQy7t4lZEOdj4vU"
         }
       },
       "permissions": [

@@ -7,21 +7,24 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from "expo-splash-screen";
 import * as Location from 'expo-location';
 import BottomTab from './app/navigation/BottomTab';
-import {UserLocationContext} from './app/context/UserLocationContext';
-import {UserReversedGeoCode} from './app/context/UserReversedGeoCode';
-
-import DrinksNavigator from './app/navigation/DrinksNavigator';
-import ShopPage from './app/navigation/shopPage';
+import { UserLocationContext } from './app/context/UserLocationContext';
+import { ShopContext } from './app/context/ShopContext';
+import { UserReversedGeoCode } from './app/context/UserReversedGeoCode';
+import DrinskNavigator from './app/navigation/DrinksNavigator';
+import ShopPage from './app/navigation/ShopPage';
 import Shop from './app/screens/Shops/Shop';
+import AddRating from './app/screens/AddRating';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  
-  const [location, setLocation] =useState(null);
-  const [address, setAddress] =useState(null);
-  const [error, setErrorMsg] =useState(null);
+  const [location, setLocation] = useState(null);
+  const [address, setAddress] = useState(null);
+  const [shopObj, setShopObj] = useState(null);
+  const [error, setErrorMsg] = useState(null);
+
 
   const defaultAddresss = { "city": "Shanghai", "country": "China", "district": "Pudong", "isoCountryCode": "CN", "name": "33 East Nanjing Rd", "postalCode": "94108", "region": "SH", "street": "Stockton St", "streetNumber": "1", "subregion": "San Francisco County", "timezone": "America/Los_Angeles" }
+
   const [fontsLoaded] = useFonts({
     regular: require('./assets/fonts/Poppins-Regular.ttf'),
     light: require('./assets/fonts/Poppins-Light.ttf'),
@@ -42,16 +45,16 @@ export default function App() {
     (async () => {
       setAddress(defaultAddresss);
 
-      let {status} = await Location.requestForegroundPermissionsAsync();
-      if(status !== 'granted'){
-        setErrorMsg('Permission to access location has been denied!');
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permission to access location as denied');
         return;
       }
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location)
     })();
-  },[])
+  }, [])
 
   if (!fontsLoaded) {
     // Return a loading indicator or splash screen while fonts are loading or app is initializing
@@ -59,39 +62,47 @@ export default function App() {
   }
 
   return (
-    <UserLocationContext.Provider value = {{location, setLocation}}>
-      <UserReversedGeoCode.Provider value = {{address, setAddress}}>
-      <NavigationContainer>
-      <Stack.Navigator>
+    <UserLocationContext.Provider value={{ location, setLocation }}>
+      <UserReversedGeoCode.Provider value={{ address, setAddress }}>
+      <ShopContext.Provider value={{ shopObj, setShopObj }}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name='bottom-navigation'
+              component={BottomTab}
+              options={{ headerShown: false }}
+            />
 
-        <Stack.Screen
-          name='bottom-navigation'
-          component={BottomTab}
-          options={{ headerShown: false }}
-        />
+            <Stack.Screen
+              name='drink-nav'
+              component={DrinskNavigator}
+              options={{ headerShown: false }}
+            />
 
-        <Stack.Screen
-          name='drink-nav'
-          component={DrinksNavigator}
-          options={{ headerShown: false }}
-        />
+            <Stack.Screen
+              name='shop-page'
+              component={ShopPage}
+              options={{ headerShown: false }}
+            />
 
-        <Stack.Screen
-          name='shop-page'
-          component={ShopPage}
-          options={{ headerShown: false }}
-        />
+            <Stack.Screen
+              name='shop'
+              component={Shop}
+              options={{ headerShown: false }}
+            />
 
-        <Stack.Screen
-          name='shop'
-          component={Shop}
-          options={{ headerShown: false }}
-        />
+            <Stack.Screen
+              name='rating'
+              component={AddRating}
+              options={{ headerShown: false }}
+            />
 
-      </Stack.Navigator>
-    </NavigationContainer>
-    </UserReversedGeoCode.Provider>
+
+          </Stack.Navigator>
+        </NavigationContainer>
+        </ShopContext.Provider>
+      </UserReversedGeoCode.Provider>
     </UserLocationContext.Provider>
-    
+
   );
 }
