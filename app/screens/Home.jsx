@@ -12,6 +12,7 @@ import Divider from "../components/Divider";
 import NearbyShops from "../components/NearbyShops";
 import NewDrinksList from "../components/NewDrinksList";
 import FeaturedBrands from "../components/FeaturedBrands";
+import HomeCategories from "../components/HomeCategories";
 
 
 const Home = () => {
@@ -37,23 +38,32 @@ const Home = () => {
             />
 
             <ChoicesList setSelectedChoice={setSelectedChoice} setSelectedSection={setSelectedSection}/>
+              {selectedCategory !== null && selectedSection !== null ? (
 
-            <View>
-            <Heading heading={'Nearby Liqour shops'} onPress={() =>{}}/>
-
-          <NearbyShops />
-          <Divider />
-
-          <Heading heading={'Drink-spiration to start with'} onPress={() =>{}}/>
-
-          <NewDrinksList/>
-
-          <Divider />
-
-          <Heading heading={'Featured Brands'} onPress={() =>{}}/>
-
-          <FeaturedBrands/>
-            </View>
+              <View>
+                  <Heading heading={`Browse ${selectedValue}`} onPress={() =>{}}/>
+                  <HomeCategories />
+              </View>
+                
+              ): (
+                <View>
+                <Heading heading={'Nearby Liqour shops'} onPress={() =>{}}/>
+    
+              <NearbyShops />
+              <Divider />
+    
+              <Heading heading={'Drink-spiration to start with'} onPress={() =>{}}/>
+    
+              <NewDrinksList/>
+    
+              <Divider />
+    
+              <Heading heading={'Featured Brands'} onPress={() =>{}}/>
+    
+              <FeaturedBrands/>
+                </View>
+              )}
+           
           </ScrollView>
         </View>
       </View>

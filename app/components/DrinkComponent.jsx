@@ -7,7 +7,7 @@ const DrinkComponent = ({item, onPress}) => {
   return (
     <TouchableOpacity style={styles.wrapper} onPress={onPress}>
         <NetworkImage 
-        data={item.imageUrl[0]}
+        source={item.imageUrl[0]}
         width={SIZES.width-60}
         height={SIZES.height/5.8}
         radius={16}

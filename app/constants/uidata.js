@@ -66,10 +66,10 @@ const restaurants = [
         "_id": "6530ebbcc9e72013e5b65933",
         "title": "SHOP 1test",
         "time": "15 min",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "imageUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "owner": "fdfsdfsdfs",
         "code": "41007428",
-        "logoUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "logoUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "rating": 5,
         "ratingCount": "6765",
         "coords": {
@@ -86,10 +86,10 @@ const restaurants = [
         "_id": "6530ea6bc9e72013e5b6592d",
         "title": "SHOP 2test",
         "time": "30 min",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "imageUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "owner": "sjgdsjgfjshhjs",
         "code": "41007428",
-        "logoUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "logoUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "rating": 5,
         "ratingCount": "3278",
         "coords": {
@@ -106,10 +106,10 @@ const restaurants = [
         "_id": "6530eb66c9e72013e5b65931",
         "title": "SHOP 3test",
         "time": "25 min",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "imageUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "owner": "fgdgdfgd",
         "code": "41007428",
-        "logoUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "logoUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "rating": 5,
         "ratingCount": "5666",
         "coords": {
@@ -126,10 +126,10 @@ const restaurants = [
         "_id": "6530eb23c9e72013e5b6592f",
         "title": "SHOP 4test",
         "time": "35 min",
-        "imageUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "imageUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "owner": "sjgdsjgfjshhjs",
         "code": "41007428",
-        "logoUrl": "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
+        "logoUrl": "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
         "rating": 5,
         "ratingCount": "3278",
         "coords": {
@@ -193,7 +193,7 @@ const foods = [
             }
         ],
         "imageUrl": [
-            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp"
+            "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq"
         ],
         "__v": 0,
         "category": "6531209dbbe4998e90af3fef",
@@ -249,7 +249,7 @@ const foods = [
             }
         ],
         "imageUrl": [
-            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp"
+            "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq"
         ],
         "__v": 2,
         "category": "6531209dbbe4998e90af3fef",
@@ -307,7 +307,7 @@ const foods = [
             }
         ],
         "imageUrl": [
-            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp"
+            "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq"
         ],
         "__v": 0,
         "category": "6531209dbbe4998e90af3fef",
@@ -349,8 +349,8 @@ const foods = [
             }
         ],
         "imageUrl": [
-            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp",
-            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp"
+            "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq",
+            "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq"
         ],
         "__v": 0,
         "category": "6531209dbbe4998e90af3fef",
@@ -408,7 +408,7 @@ const foods = [
             }
         ],
         "imageUrl": [
-            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp"
+            "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq"
         ],
         "__v": 0,
         "category": "6531209dbbe4998e90af3fef",
@@ -466,7 +466,7 @@ const foods = [
             }
         ],
         "imageUrl": [
-            "https://d326fntlu7tb1e.cloudfront.net/uploads/5c2a9ca8-eb07-400b-b8a6-2acfab2a9ee2-image001.webp"
+            "https://qph.cf2.quoracdn.net/main-qimg-6920ee5148ca8b4de3cec3bb5dca4950-lq"
         ],
         "__v": 0,
         "category": "6531209dbbe4998e90af3fef",

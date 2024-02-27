@@ -7,8 +7,9 @@ import {
 } from "react-native";
 import React from "react";
 import { COLORS, SIZES } from "../constants/theme";
-import { NetworkImage } from "../components";
+
 import { RatingInput, Rating } from "react-native-stock-star-rating";
+import NetworkImage from "./NetworkImage";
 
 const CategoryFoodComp = ({ item, onPress }) => {
   return (

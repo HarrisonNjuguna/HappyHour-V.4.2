@@ -11,6 +11,7 @@ import ProfileTile from "../components/ProfileTile";
 import RegistrationTile from "../components/RegistrationTile";
 
 const Profile = () => {
+  const { login, setLogin } = useContext(LoginContext)
   const [user, setUser] = useState(null)
 
   // const { user, isProfileLoading, error, refetch } = fetchProfile();
@@ -55,10 +56,10 @@ const Profile = () => {
               />
               <View style={{ marginLeft: 10, marginTop: 3 }}>
                 <Text style={styles.text}>
-                  {user === null ? "username" : user.username}
+                  {user === null ? "Harry" : user.username}
                 </Text>
                 <Text style={styles.email}>
-                  {user === null ? "email" : user.email}
+                  {user === null ? "harrydevtest@gmail.com" : user.email}
                 </Text>
               </View>
             </View>

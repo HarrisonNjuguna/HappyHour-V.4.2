@@ -7,7 +7,8 @@ import {RatingInput} from 'react-native-stock-star-rating'
 const StoreComponent = ({item, onPress}) => {
   return (
     <TouchableOpacity style={styles.wrapper} onPress={onPress}>
-        <NetworkImage data={item.imageUrl}
+        <NetworkImage 
+        source={item.imageUrl}
         width={SIZES.width-80}
         height={SIZES.height/5.8}
         radius={16}

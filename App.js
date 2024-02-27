@@ -8,17 +8,23 @@ import * as SplashScreen from "expo-splash-screen";
 import * as Location from 'expo-location';
 import BottomTab from './app/navigation/BottomTab';
 import { UserLocationContext } from './app/context/UserLocationContext';
+import { LoginContext } from './app/context/LoginContext';
 import { ShopContext } from './app/context/ShopContext';
 import { UserReversedGeoCode } from './app/context/UserReversedGeoCode';
 import DrinskNavigator from './app/navigation/DrinksNavigator';
 import ShopPage from './app/navigation/ShopPage';
 import Shop from './app/screens/Shops/Shop';
+import SignUp from './app/screens/SignUp';
 import AddRating from './app/screens/AddRating';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { CartCountContext } from './app/context/CartCountContext';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [location, setLocation] = useState(null);
+  const [login, setLogin] = useState(false);
   const [address, setAddress] = useState(null);
+  const [cartCount, setCartCount] = useState(0);
   const [shopObj, setShopObj] = useState(null);
   const [error, setErrorMsg] = useState(null);
 
@@ -53,6 +59,7 @@ export default function App() {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location)
+      loginStatus()
     })();
   }, [])
 
@@ -61,10 +68,23 @@ export default function App() {
     return;
   }
 
+    // Login context
+  const loginStatus = async () => {
+    const userToken = await AsyncStorage.getItem('token')
+
+    if(userToken !== null){
+      setLogin(true)
+    }else{
+      setLogin(false)
+    }
+  }
+
   return (
     <UserLocationContext.Provider value={{ location, setLocation }}>
       <UserReversedGeoCode.Provider value={{ address, setAddress }}>
       <ShopContext.Provider value={{ shopObj, setShopObj }}>
+      <LoginContext.Provider value={{ login, setLogin }}>
+      <CartCountContext.Provider value={{ cartCount, setCartCount }}>
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
@@ -92,6 +112,12 @@ export default function App() {
             />
 
             <Stack.Screen
+              name='signUp'
+              component={SignUp}
+              options={{ headerShown: false }}
+            />
+
+            <Stack.Screen
               name='rating'
               component={AddRating}
               options={{ headerShown: false }}
@@ -100,6 +126,8 @@ export default function App() {
 
           </Stack.Navigator>
         </NavigationContainer>
+        </CartCountContext.Provider>
+        </LoginContext.Provider>
         </ShopContext.Provider>
       </UserReversedGeoCode.Provider>
     </UserLocationContext.Provider>

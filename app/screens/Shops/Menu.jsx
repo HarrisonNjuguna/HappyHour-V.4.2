@@ -19,7 +19,7 @@ const Menu = () => {
         keyExtractor={(item) =>  item._id}
         scrollEnabled
         renderItem={({item}) => (
-        <DrinkTile item={item}/>
+        <DrinkTile item={item} showDetails={() => navigation.navigate('drink-nav', item)}/>
         )}
       />
     </View>

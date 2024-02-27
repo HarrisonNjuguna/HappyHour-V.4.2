@@ -168,7 +168,7 @@ const SignUp = ({ navigation }) => {
           source={require("../../assets/anime/delivery.json")}
         />
 
-        <Text style={styles.titleLogin}>Foodly Family</Text>
+        <Text style={styles.titleLogin}>HappyHour.io</Text>
         <Formik
           initialValues={{
             email: "",

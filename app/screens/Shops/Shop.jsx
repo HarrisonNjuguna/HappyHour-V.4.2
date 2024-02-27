@@ -49,7 +49,7 @@ const Shop = ({navigation}) => {
         </TouchableOpacity>
 
       <NetworkImage 
-      data={item.imageUrl} 
+      source={item.imageUrl} 
       height={SIZES.height/3.4} 
       width={SIZES.width} 
       radius={15}
